@@ -57,11 +57,15 @@
       }
 
       li {
+        border-radius: 1rem;
+        background: transparent;
+        overflow: hidden;
         transition: all 0.3s ease;
+        max-width: fit-content
       }
       li:hover {
-        font-size: 0.9rem;
         font-weight: bold;
+        background: rgba(128, 128, 128, 0.129)
       }
 
       @layer components {
@@ -560,7 +564,7 @@
       <!-- Articles News Ends -->
 
       <!-- Next Project Starts -->
-      <section class="section_four bg-[url('./assets/bg.jpg')] bg-no-repeat bg-center bg-cover h-[80dvh] grid place-items-center">
+      <section class="section_four bg-[url('./assets/bg.jpg')] bg-no-repeat bg-center bg-cover py-10">
         <section class="next_project text-white custom-width">
           <article class="text-center flex flex-col gap-3 justify-evenly py-3">
             <button class="light-btn self-center">
@@ -575,7 +579,7 @@
           </article>
 
           <section class="input_form">
-            <form action="" class="grid md:grid-cols-2 grid-cols-1 md:mb-5 mb-2 md:gap-5 gap-2">
+            <form action="" class="grid md:grid-cols-2 grid-cols-1 md:mb-5 mb-2 gap-5">
               <!-- Input firstName -->
               <div class="input_field relative ">
                 <input
@@ -647,7 +651,32 @@
       </section>
       <!-- Next Project Ends -->
     </main>
-    <footer></footer>
+
+    <!-- Footer section Starts -->
+    <footer>
+      <section class="footer_container py-10 custom-width text-center flex flex-col gap-5">
+        <article class="footer_article flex flex-col gap-4">
+          <a class="text-3xl font-bold flex justify-center items-center"
+            ><i class="fa-solid fa-arrow-right-long round-icon mr-2"></i
+            >Rinterio</a
+          >
+              <p class="text-xs text-gray-600 text-center w-3/4 mx-auto">The barn house captivates with its blend of rustic charm and modern sophistication, featuring weathered wood, sleek metal accents.</p>
+        </article>
+        <nav class="footer_nav w-full">
+          <div class="navbar-center w-full">
+            <ul class="menu menu-horizontal px-1 flex md:flex-row flex-col justify-center items-center gap-5">
+              <li><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Portfolio</a></li>
+              <li><a>Blogs</a></li>
+              <li><a>ContactUs</a></li>
+            </ul>
+          </div>
+        </nav>
+        <button class="round-btn mx-auto">Book Consult<i class="fa-solid fa-arrow-right-long round-icon bg-black text-whit e mr-0 text-white"></i></button>
+      </section>
+    </footer>
+    <!-- Footer section Ends -->
   </body>
 </html>
 <!-- <i class="fa-solid fa-arrow-right-long pr-2"> -->
