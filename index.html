@@ -27,6 +27,35 @@
       .manrope {
         font-family: "Manrope", sans-serif;
       }
+
+      form input{
+        background: #f3f2f2;
+        width: 100%;
+        color: rgb(51, 48, 48);
+        text-transform:capitalize;
+        font-weight: bold;
+        font-size: 1.5rem;
+        border-start-start-radius: 9999px;
+        border-end-start-radius: 9999px;
+        border-start-end-radius: 9999px;
+        border-end-end-radius: 9999px;
+        transition: all 0.5s ease;
+        border-bottom: 2px solid transparent;
+        padding: 0.9rem 2rem;
+        cursor: pointer;
+        &::placeholder{
+          font-size: 1rem;
+          font-weight: 700;
+          letter-spacing:2px;
+          color: transparent;
+        }
+        &:focus{
+          background: transparent;
+          border-bottom: 2px solid gray;
+          outline: none;
+        }
+      }
+
       li {
         transition: all 0.3s ease;
       }
@@ -42,18 +71,21 @@
         .round-icon {
           @apply ml-1 px-2 py-[5px] text-gray-500 -rotate-45 rounded-full bg-[#abef5f] text-sm;
         }
-
         .round-btn {
-          @apply pl-4 py-1 pr-1 text-sm bg-[#d6f3b5b4] rounded-s-full rounded-e-full text-gray-700 font-extrabold flex justify-between items-center whitespace-nowrap capitalize;
+          @apply pl-4 py-1 pr-1 text-sm bg-[#d6f3b5b4] transition-all rounded-s-full rounded-e-full text-gray-700 font-extrabold flex justify-between items-center whitespace-nowrap capitalize shadow-xl hover:bg-[#9ddd53cb];
         }
         .light-btn {
-          @apply bg-slate-100 py-2 px-4 rounded-s-full rounded-e-full text-gray-600 font-extrabold capitalize my-6;
+          @apply bg-slate-100 hover:bg-slate-200  transition-all py-1 px-4 rounded-s-full rounded-e-full text-gray-600 font-extrabold capitalize my-6 shadow-lg;
         }
         .heading-txt {
           @apply lg:text-5xl md:text-2xl text-xl font-extrabold text-[#212121] w-full capitalize;
         }
         .card-heading {
           @apply font-extrabold capitalize text-gray-700;
+        }
+
+        .label_effect{
+          @apply tracking-wide text-sm font-bold absolute left-0 -top-5 pl-5 text-gray-400 transition-all duration-500 peer-placeholder-shown:text-xl peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-1/3 peer-focus:-top-5 peer-focus:text-sm;
         }
       }
     </style>
@@ -113,9 +145,9 @@
       <!-- Hero Section Starts -->
       <section class="hero">
         <div class="hero-content flex flex-col w-full">
-          <figure>
+          <figure class="max-w-[85%]">
             <img
-              class="w-full"
+              class="w-full object-cover"
               src="./assets/banner.png"
               alt="duplex building" />
           </figure>
@@ -234,6 +266,7 @@
           </div>
         </section>
         <!-- Review previews stat ends-->
+
         <!-- work Process starts-->
         <section class="work_process custom-width bg-green-200 py-16">
           <article class="text-center space-y-5">
@@ -310,28 +343,23 @@
             </p>
           </article>
 
-
-
-
-
-
-
           <section
             class="portfolio_cards_container custom-width grid lg:grid-cols-8 md:grid-cols-4 gap-5 bg-gray-900">
             <!-- Card One -->
             <div
-              class="card_one flex md:flex-row flex-col gap-6 lg:p-4 p-3 rounded-3xl  lg:col-span-5 lg:col-end-6 col-span-full bg-green-400">
+              class="card_one flex md:flex-row flex-col gap-6 lg:p-4 p-3 rounded-3xl lg:col-span-5 lg:col-end-6 col-span-full bg-green-400">
               <figure class="lg:w-3/5 w-full">
                 <img
                   class="object-cover w-full h-full rounded-3xl"
                   src="./assets/img1.png"
                   alt="" />
               </figure>
-              <article class="lg:w-2/5 w-full h-full flex justify-around flex-col gap-3" >
+              <article
+                class="lg:w-2/5 w-full h-full flex justify-around flex-col gap-3">
                 <h4 class="card-heading">commercial</h4>
                 <p class="text-sm text-gray-800">
-                    business purposes, such as multifamily apartments, mixed-use
-                    developments, and rental units. It offers investment
+                  business purposes, such as multifamily apartments, mixed-use
+                  developments, and rental units. It offers investment
                 </p>
                 <button
                   class="round-btn bg-transparent hover:bg-[#d6f3b5b4] self-start">
@@ -373,11 +401,11 @@
                   alt="" />
               </figure>
               <article
-                class=" lg:w-2/5 w-full h-full flex justify-around flex-col gap-3">
+                class="lg:w-2/5 w-full h-full flex justify-around flex-col gap-3">
                 <h4 class="card-heading">commercial</h4>
                 <p class="text-sm text-gray-800">
-                    business purposes, such as multifamily apartments, mixed-use
-                    developments, and rental units. It offers investment
+                  business purposes, such as multifamily apartments, mixed-use
+                  developments, and rental units. It offers investment
                 </p>
                 <button
                   class="round-btn bg-transparent hover:bg-[#d6f3b5b4] self-start">
@@ -401,8 +429,223 @@
         </section>
         <!-- Explore Latest Works ends-->
       </section>
-      <section class="section_three"></section>
-      <section class="section_four"></section>
+
+      <!-- Articles News Starts -->
+      <section class="section_three">
+        <section class="article_news_container custom-width bg-green-900 py-5">
+          <section class="article_news_articles bg-gray-300">
+            <article class="text-center flex flex-col gap-3 justify-evenly">
+              <button class="light-btn self-center">
+                <i class="fa-solid fa-arrow-right-long pr-2"></i>Rinterio News
+              </button>
+              <h1 class="heading-txt">Read Our Articles and News</h1>
+              <p class="text-sm">
+                The barn house captivates with its blend of rustic charm and
+                modern sophistication, featuring weathered wood, sleek metal
+                accents.
+              </p>
+            </article>
+          </section>
+          <!-- card container -->
+          <section
+            class="article_cards_container flex lg:flex-row flex-col justify-between lg:gap-4 gap-3 my-5 w-full">
+            <!-- card-01 -->
+            <section
+              class="article_card bg-gray-100 w-full lg:p-4 p-3 rounded-2xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
+              <figure class="w-full min-h-fit flex-1">
+                <img
+                  class="object-fill w-full h-full"
+                  src="./assets/article1.png"
+                  alt="" />
+              </figure>
+              <article class="card_body space-y-3 flex-1">
+                <div
+                  class="icon_box flex justify-start items-center lg:gap-5 gap-2 my-4 text-sm text-gray-500">
+                  <span class="date flex-1 whitespace-nowrap"
+                    ><i
+                      class="fa-solid fa-calendar-days lg:mr-2 mr-1 text-xs"></i
+                    >22th August,2024</span
+                  >
+                  <span class="by_whom flex-1"
+                    ><i class="fa-solid fa-user-check lg:mr-2 mr-1 text-xs"></i
+                    >By Admin</span
+                  >
+                </div>
+                <h4 class="card-heading">
+                  How to choose the furniture right for your Home.
+                </h4>
+                <p class="text-xs">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+                <button class="round-btn bg-transparent hover:bg-green-100">
+                  read more<i
+                    class="fa-solid fa-arrow-right-long round-icon"></i>
+                </button>
+              </article>
+            </section>
+            <!-- Card-02 -->
+            <section
+              class="article_card bg-gray-100 w-full lg:p-4 p-3 rounded-2xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
+              <figure class="w-full min-h-fit flex-1">
+                <img
+                  class="object-fill w-full h-full"
+                  src="./assets/article2.png"
+                  alt="" />
+              </figure>
+              <article class="card_body space-y-3 flex-1">
+                <div
+                  class="icon_box flex justify-start items-center lg:gap-5 gap-2 my-4 text-sm text-gray-500">
+                  <span class="date flex-1 whitespace-nowrap"
+                    ><i
+                      class="fa-solid fa-calendar-days lg:mr-2 mr-1 text-xs"></i
+                    >22th August,2024</span
+                  >
+                  <span class="by_whom flex-1"
+                    ><i class="fa-solid fa-user-check lg:mr-2 mr-1 text-xs"></i
+                    >By Admin</span
+                  >
+                </div>
+                <h4 class="card-heading">
+                  How to choose the furniture right for your Home.
+                </h4>
+                <p class="text-xs">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+                <button class="round-btn bg-transparent hover:bg-green-100">
+                  read more<i
+                    class="fa-solid fa-arrow-right-long round-icon"></i>
+                </button>
+              </article>
+            </section>
+            <!-- Card-03 -->
+            <section
+              class="article_card bg-gray-100 w-full lg:p-4 p-3 rounded-2xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
+              <figure class="w-full min-h-fit flex-1">
+                <img
+                  class="object-fill w-full h-full"
+                  src="./assets/article3.png"
+                  alt="" />
+              </figure>
+              <article class="card_body space-y-3 flex-1">
+                <div
+                  class="icon_box flex justify-start items-center lg:gap-5 gap-2 my-4 text-sm text-gray-500">
+                  <span class="date flex-1 whitespace-nowrap"
+                    ><i
+                      class="fa-solid fa-calendar-days lg:mr-2 mr-1 text-xs"></i
+                    >22th August,2024</span
+                  >
+                  <span class="by_whom flex-1"
+                    ><i class="fa-solid fa-user-check lg:mr-2 mr-1 text-xs"></i
+                    >By Admin</span
+                  >
+                </div>
+                <h4 class="card-heading">
+                  How to choose the furniture right for your Home.
+                </h4>
+                <p class="text-xs">
+                  The barn house captivates with its blend of rustic charm and
+                  modern.
+                </p>
+                <button class="round-btn bg-transparent hover:bg-green-100">
+                  read more<i
+                    class="fa-solid fa-arrow-right-long round-icon"></i>
+                </button>
+              </article>
+            </section>
+          </section>
+        </section>
+      </section>
+      <!-- Articles News Ends -->
+
+      <!-- Next Project Starts -->
+      <section class="section_four bg-[url('./assets/bg.jpg')] bg-no-repeat bg-center bg-cover h-[80dvh] grid place-items-center">
+        <section class="next_project text-white custom-width">
+          <article class="text-center flex flex-col gap-3 justify-evenly py-3">
+            <button class="light-btn self-center">
+              <i class="fa-solid fa-arrow-right-long pr-2"></i>let's connect
+            </button>
+            <h1 class="heading-txt">let's discuss next project</h1>
+            <p class="text-sm text-gray-800">
+              The barn house captivates with its blend of rustic charm and
+              modern sophistication, featuring weathered wood, sleek metal
+              accents.
+            </p>
+          </article>
+
+          <section class="input_form">
+            <form action="" class="grid md:grid-cols-2 grid-cols-1 md:mb-5 mb-2 md:gap-5 gap-2">
+              <!-- Input firstName -->
+              <div class="input_field relative ">
+                <input
+                  placeholder="First Name"
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  class="peer shadow-xl" />
+                <label
+                  for="firstName"
+                  class="label_effect"
+                  >First Name</label
+                >
+                
+              </div>
+              <!-- Input LastName -->
+              <div class="input_field relative ">
+                <input
+                  placeholder="Last Name"
+                  type="text"
+                  name="lastName"
+                  id="lastName"
+                  class="peer shadow-xl" />
+                <label
+                  for="lastName"
+                  class="label_effect"
+                  >Last Name</label
+                >
+                
+              </div>
+              <!-- Input phoneNumber -->
+              <div class="input_field relative ">
+                <input
+                  placeholder="Phone Number"
+                  type="number"
+                  name="phoneNumber"
+                  id="phoneNumber"
+                  class="peer shadow-xl" />
+                <label
+                  for="phoneNumber"
+                  class="label_effect"
+                  >Phone Number</label
+                >
+                
+              </div>
+              <!-- Input Email Address -->
+              <div class="input_field relative ">
+                <input
+                  placeholder="Email Address"
+                  type="email"
+                  name="email"
+                  id="email"
+                  class="peer shadow-xl" />
+                <label
+                  for="email"
+                  class="label_effect"
+                  >Email Address</label
+                >
+                
+              </div>
+            </form>
+          </section>
+          <textarea name="" id="" placeholder="Leave Your Message Here" class="w-full h-[20vh] bg-[#f3f2f2] p-5 rounded-s-3xl rounded-e-3xl text-2xl text-gray-800 italic capitalize outline-none shadow-xl" ></textarea>
+          <div class="w-full flex mt-4 justify-center">
+            <button class="round-btn mx-auto w-full lg:p-3 p-2 justify-center text-xl shadow-2xl">send mail<i class="fa-solid fa-arrow-right-long round-icon bg-black text-white"></i
+              ></button>
+          </div>
+        </section>
+      </section>
+      <!-- Next Project Ends -->
     </main>
     <footer></footer>
   </body>
