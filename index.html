@@ -57,15 +57,17 @@
       }
 
       li {
-        border-radius: 1rem;
+        border-radius: 0.5rem;
         background: transparent;
         overflow: hidden;
         transition: all 0.3s ease;
-        max-width: fit-content
+        max-width: fit-content;
+        font-weight: bold;
       }
       li:hover {
-        font-weight: bold;
-        background: rgba(128, 128, 128, 0.129)
+        background: #ABEF5F;
+        color: black;
+        box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
       }
 
       @layer components {
@@ -73,16 +75,16 @@
           @apply w-10/12 mx-auto my-10;
         }
         .round-icon {
-          @apply ml-1 px-2 py-[5px] text-gray-500 -rotate-45 rounded-full bg-[#abef5f] text-sm;
+          @apply ml-1 px-2 py-[5px] text-gray-500 -rotate-45 rounded-full bg-[#ABEF5F] text-sm;
         }
         .round-btn {
-          @apply pl-4 py-1 pr-1 text-sm bg-[#d6f3b5b4] transition-all rounded-s-full rounded-e-full text-gray-700 font-extrabold flex justify-between items-center whitespace-nowrap capitalize shadow-xl hover:bg-[#9ddd53cb];
+          @apply pl-4 py-1 pr-1 text-sm bg-[#ABEF5F] transition-all rounded-s-full rounded-e-full text-gray-700 font-extrabold flex justify-between items-center whitespace-nowrap capitalize shadow-xl hover:bg-[#9ddd53cb];
         }
         .light-btn {
           @apply bg-slate-100 hover:bg-slate-200  transition-all py-1 px-4 rounded-s-full rounded-e-full text-gray-600 font-extrabold capitalize my-6 shadow-lg;
         }
         .heading-txt {
-          @apply lg:text-5xl md:text-2xl text-xl font-extrabold text-[#212121] w-full capitalize;
+          @apply lg:text-5xl md:text-2xl text-xl font-extrabold text-[#0e0d0d] w-full capitalize;
         }
         .card-heading {
           @apply font-extrabold capitalize text-gray-700;
@@ -94,10 +96,10 @@
       }
     </style>
   </head>
-  <body class="manrope">
+  <body class="manrope bg-[#eeeded]">
     <header>
       <!-- Navbar Starts-->
-      <div class="navbar bg-base-100 custom-width mt-0">
+      <div class="navbar custom-width mt-0">
         <div class="navbar-start">
           <a class="text-3xl font-bold flex justify-center items-center"
             ><i class="fa-solid fa-arrow-right-long round-icon mr-2"></i
@@ -105,7 +107,7 @@
           >
         </div>
         <div class="navbar-center hidden lg:flex">
-          <ul class="menu menu-horizontal px-1">
+          <ul class="menu menu-horizontal px-1 flex gap-2">
             <li><a>Home</a></li>
             <li><a>Services</a></li>
             <li><a>Portfolio</a></li>
@@ -115,9 +117,9 @@
         </div>
         <div class="navbar-end flex lg:gap-4 gap-2">
           <i
-            class="fa-solid fa-cart-shopping round-icon rotate-0 md:block hidden"></i>
+            class="fa-solid fa-cart-shopping round-icon rotate-0 md:block hidden bg-[#ffffffd8] text-gray-900 shadow-xl cursor-pointer"></i>
           <i
-            class="fa-solid fa-magnifying-glass round-icon rotate-0 md:block hidden"></i>
+            class="fa-solid fa-magnifying-glass round-icon rotate-0 md:block hidden bg-[#ffffffd8] text-gray-900 shadow-xl cursor-pointer"></i>
 
           <a class="round-btn md:block hidden"
             >Book Consult<i
@@ -156,7 +158,7 @@
               alt="duplex building" />
           </figure>
           <div class="lg:max-w-[90%] md:max-w-[80%] max-w-full text-center">
-            <h1 class="hero_heading lg:text-7xl md:text-5xl text-3xl font-bold">
+            <h1 class="hero_heading lg:text-7xl md:text-5xl text-3xl font-bold text-[#0e0d0d]">
               A barn house of this design has a striking appearance
             </h1>
             <p class="hero_description py-6">
@@ -165,7 +167,7 @@
               accents, and large windows that flood the space with natural
               light.
             </p>
-            <button class="hero_button round-btn mx-auto">
+            <button class="hero_button round-btn mx-auto bg-[#bdef72a1]">
               view details<i
                 class="fa-solid fa-arrow-right-long round-icon"></i>
             </button>
@@ -174,20 +176,26 @@
       </section>
       <!-- Hero Section Ends -->
     </header>
+
+
+
+
     <main>
       <section class="section_one">
         <!-- Thoughtful Design starts -->
         <section
-          class="about_us flex lg:flex-row flex-col custom-width text-gray-600 gap-8 py-16 bg-slate-400">
+          class="about_us flex lg:flex-row flex-col custom-width text-gray-600 gap-8 py-10">
           <section
-            class="cards_and_article flex-1 bg-red-200 flex flex-col justify-between relative">
-            <img
-              class="lg:w-3/12 w-2/12 absolute lg:-left-[15%] left-[20%] top-0"
+            class="cards_and_article flex-1 flex flex-col justify-between">
+            <div class="relative w-full text-center lg:text-left">
+              <img
+              class="lg:w-3/12 md:w-2/12 w-4/12 absolute lg:-left-[15%] md:left-[30%] left-[15%] lg:-top-2"
               src="./assets/Vector.png"
               alt="" />
             <button class="lg:self-start self-center light-btn my-10">
               <i class="fa-solid fa-arrow-right-long pr-2"></i>About Us
             </button>
+            </div>
             <article class="about_us_article lg:text-left text-center">
               <h1 class="lg:w-9/12 heading-txt">
                 We design thoughtful, liveable spaces
@@ -199,10 +207,9 @@
               </p>
             </article>
 
-            <div
-              class="card_container flex lg:flex-col md:flex-row flex-col gap-5">
+            <div class="card_container flex lg:flex-col md:flex-row flex-col gap-5">
               <div
-                class="about_card bg-green-300 p-4 flex items-center gap-3 rounded-xl shadow-xl">
+                class="about_card bg-white p-4 flex items-center gap-3 rounded-xl shadow-xl">
                 <figure>
                   <img src="./assets/commercial.png" alt="Movie" />
                 </figure>
@@ -215,7 +222,7 @@
                 </div>
               </div>
               <div
-                class="about_card bg-green-300 p-4 flex items-center gap-3 rounded-xl shadow-xl">
+                class="about_card bg-white p-4 flex items-center gap-3 rounded-xl shadow-xl">
                 <figure>
                   <img src="./assets/residential.png" alt="Movie" />
                 </figure>
@@ -229,9 +236,9 @@
               </div>
             </div>
           </section>
-          <figure class="aboutUs_figure flex-1 bg-yellow-200 max-w-10/12">
+          <figure class="aboutUs_figure flex-1 rounded-2xl">
             <img
-              class="w-full h-full object-cover"
+              class="w-full h-full object-cover rounded-2xl"
               src="./assets/Rectangle.png"
               alt="" />
           </figure>
@@ -239,29 +246,29 @@
         <!-- Thoughtful Design ends -->
         <!-- Review previews stat starts-->
         <section
-          class="preview_review_stat_container custom-width bg-gray-100 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 p-5 rounded-2xl text-gray-700">
-          <div class="bg-gray-300">
+          class="preview_review_stat_container custom-width bg-gray-100 grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5 p-5 rounded-2xl text-gray-800 shadow-md">
+          <div class="">
             <div class="stat text-center">
               <figure><i class="fa-regular fa-message text-2xl"></i></figure>
               <div class="stat-value">235+</div>
               <div class="stat-desc">Happy Client Review</div>
             </div>
           </div>
-          <div class="bg-gray-300">
+          <div class="">
             <div class="stat text-center">
               <figure><i class="fa-solid fa-landmark text-2xl"></i></figure>
               <div class="stat-value">50+</div>
               <div class="stat-desc">Work Departments</div>
             </div>
           </div>
-          <div class="bg-gray-300">
+          <div class="">
             <div class="stat text-center">
               <figure><i class="fa-solid fa-people-group text-2xl"></i></figure>
               <div class="stat-value">30k+</div>
               <div class="stat-desc">Our Happy Client</div>
             </div>
           </div>
-          <div class="bg-gray-300">
+          <div class="">
             <div class="stat text-center">
               <figure><i class="fa-solid fa-users-gear text-2xl"></i></figure>
               <div class="stat-value">307+</div>
@@ -272,7 +279,7 @@
         <!-- Review previews stat ends-->
 
         <!-- work Process starts-->
-        <section class="work_process custom-width bg-green-200 py-16">
+        <section class="work_process custom-width py-16">
           <article class="text-center space-y-5">
             <button class="light-btn">
               <i class="fa-solid fa-arrow-right-long mr-2"></i>how we works
@@ -286,7 +293,7 @@
           </article>
           <section
             class="work_process_card_container grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
-            <div class="work_card bg-red-300 text-gray-800 p-5 rounded-xl">
+            <div class="work_card bg-[#E7C1D3] text-gray-800 p-5 rounded-xl shadow-lg">
               <figure>
                 <img src="./assets/concept.png" alt="" />
               </figure>
@@ -296,7 +303,7 @@
                 modern.
               </p>
             </div>
-            <div class="work_card bg-red-300 text-gray-800 p-5 rounded-xl">
+            <div class="work_card bg-[#EFDA6E] text-gray-800 p-5 rounded-xl shadow-lg">
               <figure>
                 <img src="./assets/flow-chart.png" alt="" />
               </figure>
@@ -306,7 +313,7 @@
                 modern.
               </p>
             </div>
-            <div class="work_card bg-red-300 text-gray-800 p-5 rounded-xl">
+            <div class="work_card bg-[#A4DAC3] text-gray-800 p-5 rounded-xl shadow-lg">
               <figure>
                 <img src="./assets/vision.png" alt="" />
               </figure>
@@ -316,7 +323,7 @@
                 modern.
               </p>
             </div>
-            <div class="work_card bg-red-300 text-gray-800 p-5 rounded-xl">
+            <div class="work_card bg-[#77AAEA] text-gray-800 p-5 rounded-xl shadow-lg">
               <figure>
                 <img src="./assets/budget-planning.png" alt="" />
               </figure>
@@ -331,9 +338,9 @@
         <!-- Work Process ends-->
       </section>
 
-      <section class="section_two">
+      <section class="section_two bg-white">
         <!-- Explore Latest Works starts-->
-        <section class="latest_portfolio bg-green-900 py-10">
+        <section class="latest_portfolio py-10">
           <article class="text-center">
             <button class="light-btn">
               <i class="fa-solid fa-arrow-right-long pr-2"></i>explore our
@@ -348,10 +355,10 @@
           </article>
 
           <section
-            class="portfolio_cards_container custom-width grid lg:grid-cols-8 md:grid-cols-4 gap-5 bg-gray-900">
+            class="portfolio_cards_container custom-width grid lg:grid-cols-8 md:grid-cols-4 gap-5">
             <!-- Card One -->
             <div
-              class="card_one flex md:flex-row flex-col gap-6 lg:p-4 p-3 rounded-3xl lg:col-span-5 lg:col-end-6 col-span-full bg-green-400">
+              class="card_one flex md:flex-row flex-col gap-6 lg:p-4 p-3 rounded-3xl lg:col-span-5 lg:col-end-6 col-span-full bg-[#FFFFFF] border-gray-100 border-2 shadow-xl">
               <figure class="lg:w-3/5 w-full">
                 <img
                   class="object-cover w-full h-full rounded-3xl"
@@ -375,7 +382,7 @@
 
             <!-- card Two -->
             <div
-              class="card_two bg-green-500 lg:p-4 p-3 rounded-3xl lg:col-span-3 md:col-span-2 min-h-[28dvh]">
+              class="card_two lg:p-4 p-3 rounded-3xl lg:col-span-3 md:col-span-2 min-h-[28dvh] bg-[#FFFFFF] border-gray-100 border-2 shadow-xl">
               <figure class="h-full">
                 <img
                   class="object-cover w-full h-full rounded-3xl"
@@ -386,7 +393,7 @@
 
             <!-- Card Three -->
             <div
-              class="card_three bg-red-200 lg:p-4 p-3 rounded-3xl lg:col-span-2 lg:col-end-3 md:col-span-2 h-full">
+              class="card_three lg:p-4 p-3 rounded-3xl lg:col-span-2 lg:col-end-3 md:col-span-2 h-full bg-[#FFFFFF] border-gray-100 border-2 shadow-xl">
               <figure class="h-full">
                 <img
                   class="object-cover rounded-3xl w-full h-full"
@@ -397,7 +404,7 @@
 
             <!-- Card Four -->
             <div
-              class="card_four h-full bg-blue-200 lg:p-4 p-3 rounded-3xl flex md:flex-row flex-col gap-4 lg:col-span-4 lg:order-none md:order-5 md:col-span-4">
+              class="card_four h-full lg:p-4 p-3 rounded-3xl flex md:flex-row flex-col gap-4 lg:col-span-4 lg:order-none md:order-5 md:col-span-4 bg-[#FFFFFF] border-gray-100 border-2 shadow-xl">
               <figure class="lg:w-3/5 w-full h-full">
                 <img
                   class="object-cover w-[100%] h-full rounded-3xl"
@@ -421,7 +428,7 @@
 
             <!-- Card Five -->
             <div
-              class="card_five bg-yellow-300 lg:p-4 p-3 rounded-3xl lg:col-span-2 md:hidden lg:block">
+              class="card_five lg:p-4 p-3 rounded-3xl lg:col-span-2 md:hidden lg:block bg-[#FFFFFF] border-gray-100 border-2 shadow-xl">
               <figure class="h-full">
                 <img
                   class="object-cover rounded-3xl w-full h-full"
@@ -436,8 +443,8 @@
 
       <!-- Articles News Starts -->
       <section class="section_three">
-        <section class="article_news_container custom-width bg-green-900 py-5">
-          <section class="article_news_articles bg-gray-300">
+        <section class="article_news_container custom-width py-5">
+          <section class="article_news_articles">
             <article class="text-center flex flex-col gap-3 justify-evenly">
               <button class="light-btn self-center">
                 <i class="fa-solid fa-arrow-right-long pr-2"></i>Rinterio News
@@ -455,8 +462,8 @@
             class="article_cards_container flex lg:flex-row flex-col justify-between lg:gap-4 gap-3 my-5 w-full">
             <!-- card-01 -->
             <section
-              class="article_card bg-gray-100 w-full lg:p-4 p-3 rounded-2xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
-              <figure class="w-full min-h-fit flex-1">
+              class="article_card shadow-xl bg-gray-100 w-full lg:p-4 p-3 rounded-3xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
+              <figure class="w-full min-h-fit flex-1 shadow-xl rounded-3xl">
                 <img
                   class="object-fill w-full h-full"
                   src="./assets/article1.png"
@@ -490,8 +497,8 @@
             </section>
             <!-- Card-02 -->
             <section
-              class="article_card bg-gray-100 w-full lg:p-4 p-3 rounded-2xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
-              <figure class="w-full min-h-fit flex-1">
+              class="article_card shadow-xl bg-gray-100 w-full lg:p-4 p-3 rounded-3xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
+              <figure class="w-full min-h-fit flex-1 shadow-xl rounded-3xl">
                 <img
                   class="object-fill w-full h-full"
                   src="./assets/article2.png"
@@ -525,10 +532,10 @@
             </section>
             <!-- Card-03 -->
             <section
-              class="article_card bg-gray-100 w-full lg:p-4 p-3 rounded-2xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
-              <figure class="w-full min-h-fit flex-1">
+              class="article_card shadow-xl bg-gray-100 w-full lg:p-4 p-3 rounded-3xl flex lg:flex-col md:flex-row flex-col gap-4 mx-auto">
+              <figure class="w-full min-h-fit flex-1 shadow-xl rounded-3xl">
                 <img
-                  class="object-fill w-full h-full"
+                  class="object-fill w-full h-full "
                   src="./assets/article3.png"
                   alt="" />
               </figure>
