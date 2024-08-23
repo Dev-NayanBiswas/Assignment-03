@@ -14,7 +14,8 @@
 #### *For Bonus Mark*
 10. _**Meet Our Team** part added for Bonus mark._
 11. _In this **Meet Our Team** section, 3 breaking point **grid layout** design was used, as well as **aspect-ratio** used for square card shapes, **line-clamp** to manage paragraphs._
-12. _This project is Responsive on **large, medium** and ***small*** screen._
+12. _Added cool hover feature on every card to make visible their designation and name._
+13. _This project is Responsive on **large, medium** and ***small*** screen._
     ***
 
 
