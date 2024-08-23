@@ -93,6 +93,10 @@
         .label_effect{
           @apply tracking-wide text-sm font-bold absolute left-0 -top-5 pl-5 text-gray-400 transition-all duration-500 peer-placeholder-shown:text-lg peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-1/4 peer-focus:-top-5 peer-focus:text-sm;
         }
+
+        .custom_pseudo{
+          @apply before:block before:absolute before:-inset-1 before:bg-red-600 before:left-24 before:content-none;
+        }
       }
     </style>
   </head>
@@ -634,39 +638,98 @@
       </section>
       <!-- Next Project Ends -->
 
+      <!-- Team Section starts -->
       <section class="team_container">
         <section class="our_team">
           <section class="team_container grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-3 custom-width">
             <h1 class="lg:text-6xl lg:italic text-gray-800 text-4xl lg:font-bold md:font-bold font-black font-black  col-span-2 grid grid-cols-3 md:grid-cols-4 md:col-start-1"><span class="text-center md:text-6xl  text-2xl lg:text-right col-span-2 lg:col-span-4 md:col-span-4 md:self-center md:whitespace-nowrap lg:whitespace-normal">Meet Our Team</span></h1>
             <p class="md:text-lg text-xs line-clamp-5 md:line-clamp-5 col-start-2 row-end-3 self-center  md:col-span-2 md:col-start-1 md:row-start-2 lg:row-start-1 lg:col-start-4 lg:row-span-1 lg:px-5"><span class="italic text-red-500 font-semibold text-lg">CEO says</span> as a leading real estate firm, we are committed to connecting clients with the perfect properties, leveraging our market expertise and personalized service to ensure every transaction exceeds expectations. Your success is our priority.</p>
-            <figure class="image_container-1  aspect-square h-auto drop-shadow-xl bg-gradient-to-b from-[#f32d1b68] md:col-start-4 lg:col-start-3 rounded-t-md">
+            <!-- 1 -->
+            <figure class="image_container-1 hover:scale-95 transition-all duration-400 rounded-xl relative aspect-square h-auto drop-shadow-xl bg-gradient-to-b from-[#f32d1b68] md:col-start-4 lg:col-start-3">
               <img class="h-full w-full object-cover rounded-xl" src="./assets/team/1.png" alt="">
+              <span class="absolute inset-0 opacity-0 hover:opacity-95 bg-[#1e443ea8] w-full h-full transition-all hover:duration-500 hover:left-0 flex flex-col justify-end items-start p-5 rounded-xl">
+                <div class=" h-3/5 aspect-square flex flex-col justify-center">
+                    <p class="lg:text-xl sm:text-sm text-center font-bold text-white whitespace-nowrap tracking-wider">CEO</p>
+                    <p class="lg:text-sm text-xs text-center font-semibold text-[#d0d0d1] truncate">Nayan Biswas</p>
+                </div>
+                </span>
             </figure>
-            <figure class="image_container-1  aspect-square h-auto drop-shadow-xl bg-gradient-to-b rounded-t-md from-[#83f31bad] lg:col-start-3">
+            <!-- 2 -->
+            <figure class="image_container-1 hover:scale-95 transition-all duration-400 rounded-xl relative aspect-square h-auto drop-shadow-xl bg-gradient-to-b from-[#83f31bad] lg:col-start-3">
               <img class="h-full w-full object-cover object-right-bottom rounded-xl" src="./assets/team/2.png" alt="">
+              <span class="absolute inset-0 opacity-0 hover:opacity-95 bg-[#1e443ea8] w-full h-full transition-all hover:duration-500 hover:left-0 flex flex-col justify-end items-start p-5 rounded-xl">
+                <div class=" h-3/5 aspect-square flex flex-col justify-center">
+                    <p class="lg:text-xl sm:text-sm text-center font-bold text-white whitespace-nowrap tracking-wider">Designer</p>
+                    <p class="lg:text-sm text-xs text-center font-semibold text-[#d0d0d1] truncate">Awlad Hossain</p>
+                </div>
+                </span>
             </figure>
-            <figure class="image_container-1  aspect-square h-auto drop-shadow-xl bg-gradient-to-b rounded-t-md from-[#ad7aeb87] rounded-">
+            <!-- 3 -->
+            <figure class="image_container-1 hover:scale-95 transition-all duration-400 rounded-xl relative aspect-square h-auto drop-shadow-xl bg-gradient-to-b from-[#ad7aeb87] rounded-">
               <img class="h-full w-full object-[top_center] object-cover rounded-xl" src="./assets/team/3.png" alt="">
+              <span class="absolute inset-0 opacity-0 hover:opacity-95 bg-[#1e443ea8] w-full h-full transition-all hover:duration-500 hover:left-0 flex flex-col justify-end items-start p-5 rounded-xl">
+                <div class=" h-3/5 aspect-square flex flex-col justify-center">
+                    <p class="lg:text-xl sm:text-sm text-center font-bold text-white whitespace-nowrap tracking-wider">HR</p>
+                    <p class="lg:text-sm text-xs text-center font-semibold text-[#d0d0d1] truncate">Nicolas</p>
+                </div>
+                </span>
             </figure>
-            <figure class="image_container-1  aspect-square h-auto md:col-start-2 drop-shadow-xl bg-gradient-to-b rounded-t-md from-[#d1eb4bfb] rounded-">
+            <!-- 4 -->
+            <figure class="image_container-1 hover:scale-95 transition-all duration-400 rounded-xl relative aspect-square h-auto md:col-start-2 drop-shadow-xl bg-gradient-to-b from-[#d1eb4bfb] rounded-">
               <img class="h-full w-full object-cover rounded-xl" src="./assets/team/6.png" alt="">
+              <span class="absolute inset-0 opacity-0 hover:opacity-95 bg-[#1e443ea8] w-full h-full transition-all hover:duration-500 hover:left-0 flex flex-col justify-end items-start p-5 rounded-xl">
+                <div class=" h-3/5 aspect-square flex flex-col justify-center">
+                    <p class="lg:text-xl sm:text-sm text-center font-bold text-white whitespace-nowrap tracking-wider">Ast HR</p>
+                    <p class="lg:text-sm text-xs text-center font-semibold text-[#d0d0d1] truncate">Maxine</p>
+                </div>
+                </span>
             </figure>
-            <figure class="image_container-1  aspect-square h-auto drop-shadow-xl bg-gradient-to-b rounded-t-md from-[#e98c61d3] lg:col-start-2 lg:row-start-2">
+            <!-- 5 -->
+            <figure class="image_container-1 hover:scale-95 transition-all duration-400 rounded-xl relative aspect-square h-auto drop-shadow-xl bg-gradient-to-b from-[#e98c61d3] lg:col-start-2 lg:row-start-2">
               <img class="h-full w-full object-cover rounded-xl" src="./assets/team/5.png" alt="">
+              <span class="absolute inset-0 opacity-0 hover:opacity-95 bg-[#1e443ea8] w-full h-full transition-all hover:duration-500 hover:left-0 flex flex-col justify-end items-start p-5 rounded-xl">
+                <div class=" h-3/5 aspect-square flex flex-col justify-center">
+                    <p class="lg:text-xl sm:text-sm text-center font-bold text-white whitespace-nowrap tracking-wider">Sales</p>
+                    <p class="lg:text-sm text-xs text-center font-semibold text-[#d0d0d1] truncate">Abraham D</p>
+                </div>
+                </span>
             </figure>
-            <figure class="image_container-1  aspect-square h-auto drop-shadow-xl bg-gradient-to-b rounded-t-md from-[#84cde386]">
+            <!-- 6 -->
+            <figure class="image_container-1 hover:scale-95 transition-all duration-400 rounded-xl relative  aspect-square h-auto drop-shadow-xl bg-gradient-to-b from-[#84cde386]">
               <img class="h-full w-full object-cover rounded-xl" src="./assets/team/8.png" alt="">
+              <span class="absolute inset-0 opacity-0 hover:opacity-95 bg-[#1e443ea8] w-full h-full transition-all hover:duration-500 hover:left-0 flex flex-col justify-end items-start p-5 rounded-xl">
+                <div class=" h-3/5 aspect-square flex flex-col justify-center">
+                    <p class="lg:text-xl sm:text-sm text-center font-bold text-white whitespace-nowrap tracking-wider">Engineer</p>
+                    <p class="lg:text-sm text-xs text-center font-semibold text-[#d0d0d1] truncate">Daniel Jr</p>
+                </div>
+                </span>
             </figure>
-            <figure class="image_container-1 md:colst  aspect-square h-auto drop-shadow-xl bg-gradient-to-b rounded-t-md from-[#99ff80] lg:col-start-1 lg:row-start-3">
+            <!-- 7-->
+            <figure class="image_container-1 hover:scale-95 transition-all duration-400 rounded-xl relative md:colst  aspect-square h-auto drop-shadow-xl bg-gradient-to-b from-[#99ff80] lg:col-start-1 lg:row-start-3">
               <img class="h-full w-full object-cover rounded-xl" src="./assets/team/7.png" alt="">
+              <span class="absolute inset-0 opacity-0 hover:opacity-95 bg-[#1e443ea8] w-full h-full transition-all hover:duration-500 hover:left-0 flex flex-col justify-end items-start p-5 rounded-xl">
+                <div class=" h-3/5 aspect-square flex flex-col justify-center">
+                    <p class="lg:text-xl sm:text-sm text-center font-bold text-white whitespace-nowrap tracking-wider">Developer</p>
+                    <p class="lg:text-sm text-xs text-center font-semibold text-[#d0d0d1] truncate">Charles</p>
+                </div>
+                </span>
             </figure>
-            <figure class="image_container-1  aspect-square h-auto drop-shadow-xl bg-gradient-to-b rounded-t-md from-[#c9f1f1fb] col-start-2">
+            <!-- Director 8-->
+            <figure class="image_container-1 hover:scale-95 transition-all duration-400 rounded-xl relative aspect-square h-auto drop-shadow-xl bg-gradient-to-b from-[#c9f1f1fb] col-start-2">
               <img class="h-full w-full object-cover object-bottom rounded-xl" src="./assets/team/4.png" alt="">
+              <span class="absolute inset-0 opacity-0 hover:opacity-95 bg-[#1e443ea8] w-full h-full transition-all hover:duration-500 hover:left-0 flex flex-col justify-end items-start p-5 rounded-xl">
+                <div class=" h-3/5 aspect-square flex flex-col justify-center rounded-xl">
+                    <p class="lg:text-xl sm:text-sm text-center font-bold text-white whitespace-nowrap tracking-wider">Director</p>
+                    <p class="lg:text-sm text-xs text-center font-semibold text-[#d0d0d1] truncate">John Cina</p>
+                </div>
+                </span>
             </figure>
+
             <p class="md:text-lg text-xs line-clamp-4 md:line-clamp-5 self-center md:text-center md:col-span-2 md:col-start-3 md:row-start-4 md:px-3 row-start-6"><span class="italic text-red-500 font-semibold text-lg">Director</span> we’re more than a real estate business; we’re builders of dreams and communities. Our commitment to excellence, integrity, and innovation sets us apart. We pride ourselves on delivering exceptional service and value, transforming visions into reality, and creating lasting relationships with our clients and partners. Thank you!.</p>
           </section>
         </section>
       </section>
+      <!-- Team Section ends -->
     </main>
 
     <!-- Footer section Starts -->
