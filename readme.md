@@ -11,9 +11,10 @@
 6. _Here I used few Reusable components like - round-btn, round-icon, custom-width, light-btn, label-effect._
 7. _To avoid dense repetitive class names, raw **Nested CSS** was used to get the placeholder animation based on sibling selection **peer** ._
 8. _raw **CSS** on navbar menu options as well._
-9. _**Meet Our Team** part added for Bonus mark._
-10. _In this **Meet Our Team** section, 3 breaking point **grid layout** design was used, as well as **aspect-ratio** used for square card shapes, **line-clamp** to manage paragraphs._
-11. _This project is Responsive on **large, medium** and ***small*** screen._
+#### *For Bonus Mark*
+10. _**Meet Our Team** part added for Bonus mark._
+11. _In this **Meet Our Team** section, 3 breaking point **grid layout** design was used, as well as **aspect-ratio** used for square card shapes, **line-clamp** to manage paragraphs._
+12. _This project is Responsive on **large, medium** and ***small*** screen._
     ***
 
 
